@@ -21,7 +21,7 @@ function render(cxt)
 	renderDigit(MARGIN_LEFT + 30 * (RADIUS + 1),MARGIN_TOP,10,cxt);
 	renderDigit(MARGIN_LEFT + 39 * (RADIUS + 1),MARGIN_TOP,parseInt(minutes/10),cxt);
 	renderDigit(MARGIN_LEFT + 54 * (RADIUS + 1),MARGIN_TOP,parseInt(minutes%10),cxt);
-	renderDigit(MARGIN_LEFT + 63 * (RADIUS + 1),MARGIN_TOP,10,cxt);
+	renderDigit(MARGIN_LEFT + 69 * (RADIUS + 1),MARGIN_TOP,10,cxt);
 	renderDigit(MARGIN_LEFT + 78 * (RADIUS + 1),MARGIN_TOP,parseInt(seconds/10),cxt);
 	renderDigit(MARGIN_LEFT + 93 * (RADIUS + 1),MARGIN_TOP,parseInt(seconds%10),cxt);
 }
@@ -30,7 +30,7 @@ function renderDigit(x,y,num,cxt)
 	cxt.fillStyle = "rgb(0,102,153)";
 	for(var i = 0;i < digit[num].length;i++)
 	{
-		for(var j = 0;i < digit[num][i].length;j++)
+		for(var j = 0;j < digit[num][i].length;j++)
 		{
 			if(digit[num][i][j] == 1)
 			{
