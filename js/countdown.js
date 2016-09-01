@@ -80,8 +80,8 @@ function render(cxt)
 		balls[i].vy += balls[i].g;
 		if(balls[i].y >= HEIGHT - RADIUS)
 		{
-			balls[i] = HEIGHT - RADIUS;
-			balls[i].vy = balls.vy * 0.75;
+			balls[i].y = HEIGHT - RADIUS;
+			balls[i].vy = -balls[i].vy * 0.75;
 		}
 	}
 }
