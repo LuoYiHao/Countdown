@@ -84,6 +84,20 @@ function render(cxt)
 			balls[i].vy = -balls[i].vy * 0.75;
 		}
 	}
+	
+	var count = 0;
+	for(var i = 0;i < balls.length;i++)
+	{
+		if(balls[i].x + RADIUS > 0 && balls[i].x - RADIUS < WIDTH)
+		{
+			balls[count++] = balls[i];
+		}
+	}
+	while(balls.length > count)
+	{
+		balls.pop();
+	}
+	console.log(balls.length);
 }
 function renderDigit(x,y,num,cxt)
 {
